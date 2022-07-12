@@ -13,9 +13,10 @@
 #       the sum of a prime square, prime cube, and prime fourth power?
 
 from math import floor, sqrt
+from typing import List
 
 
-def primes_below(n):
+def primes_below(n: int) -> List[int]:
     """
     Returns an ordered list of all the primes below `n`.
 
@@ -53,7 +54,7 @@ def primes_below(n):
         return primes
 
 
-def main(n):
+def main(n: int) -> int:
     """
     Returns the count of numbers below `n` which can be expressed as
       the sum of a prime square, prime cube, and prime 4th power.
@@ -62,10 +63,8 @@ def main(n):
         n (int): Natural number
 
     Returns:
-        (int, int):
-            Tuple of ...
-              * First number that can be summed by primes in over `min_ways` ways
-              * Number of ways to sum to that number
+        (int): Count of numbers below `n` which can be expressed as
+                 the sum of a prime square, prime cube, and prime 4th power
 
     Raises:
         AssertError: if incorrect args are given
